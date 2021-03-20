@@ -1,3 +1,5 @@
+
+//add and display income
 function addMoney() {
     var totalBudget = parseInt(document.getElementById("totalBudget").innerHTML);
     var currentBalance = parseInt(document.getElementById("currentBalance").innerHTML);
@@ -23,7 +25,7 @@ function addMoney() {
     
   };
   
-  //add expenses
+  //add and display expenses
   function addExpense() {
     var currentBalance = parseInt(document.getElementById("currentBalance").innerHTML);
     var expenseName = document.getElementById('expenseName').value;
@@ -44,7 +46,7 @@ function addMoney() {
    else
     alert("Sorry your expense amount is higher thatn your current balance");
   }
-  //display added expenses
+  //display results of income minus expenses
   function addedExpense() {
     var currentBalance = parseInt(document.getElementById("currentBalance").innerHTML);
     var expenseName = document.getElementById("expenseName").value;
