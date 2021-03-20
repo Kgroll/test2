@@ -1,5 +1,3 @@
-
-//add and display income
 function addMoney() {
     var totalBudget = parseInt(document.getElementById("totalBudget").innerHTML);
     var currentBalance = parseInt(document.getElementById("currentBalance").innerHTML);
@@ -20,12 +18,12 @@ function addMoney() {
     var incomeAmount = parseInt(document.getElementById('incomeAmount').value);
     
     var para = document.createElement ('p');
-    para.innerHTML = `Income: ${incomeName} <br> Income Amount: ${incomeAmount}`;
+    para.innerHTML = `Income Name: ${incomeName} <br> Income Amount: ${incomeAmount}`;
     document.getElementById("addedMoney").appendChild(para);
     
   };
   
-  //add and display expenses
+  //add expenses
   function addExpense() {
     var currentBalance = parseInt(document.getElementById("currentBalance").innerHTML);
     var expenseName = document.getElementById('expenseName').value;
@@ -40,17 +38,17 @@ function addMoney() {
      currentBalance -= expenseAmount;
      document.getElementById('currentBalance').innerHTML = currentBalance
      var para = document.createElement ('p')
-     para.innerHTML = `Expense: ${expenseName} <br> Expense Amount: ${expenseAmount}`;
+     para.innerHTML = `Expense Name: ${expenseName} <br> Expense Amount: ${expenseAmount}`;
      document.getElementById("addedExpenses").appendChild(para);
    }  
    else
     alert("Sorry your expense amount is higher thatn your current balance");
   }
-  //display results of income minus expenses
+  //display added expenses
   function addedExpense() {
     var currentBalance = parseInt(document.getElementById("currentBalance").innerHTML);
     var expenseName = document.getElementById("expenseName").value;
-    var expenseAmount = parseInt(document.getElementById('expenseAmount').value);
+    var expenseAmount = parseInt(document.getElementById('expnseAmount').value);
     if (expenseName.length == " ") {
       alert("Please enter an expense name");
     }
@@ -61,7 +59,7 @@ function addMoney() {
       currentBalance -= expenseAmount;
       document.getElementById("currentBalance").innerHTML = currentBalance
       var para = document.createElement('p')
-      para.innerHTML = `Expense:  ${expenseName} <br> Expense Amount: ${expenseAmount}`;
+      para.innerHTML = `Expense name:  ${expenseName} <br> Expense Amount: ${expenseAmount}`;
       document.getElementById("addedExpense").appendChild(para);
     }
     else {
